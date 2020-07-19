@@ -1,16 +1,6 @@
-
-
 /* 
 숙제!
 loop 함수를 구현하라
-
-# 함수 호출
-loop(function (i) { console.log(fizzBuzz(i));},6);  -> 1,2,Fizz,4,Buzz,Fizz 이렇게 되어야한다.
-
-loop 함수는 외부에서 입력받은 숫자만큼 외부에서 입력 받은 로직을 실행한다.
-
-비동기 함수도.. setTimeout, setInterval
-
 */
 
 function fizzBuzz(num) {
@@ -20,6 +10,12 @@ function fizzBuzz(num) {
   return num;
 }
 
+function f(count){
+  console.log(fizzBuzz(count));
+}
+
+// 1번 문제
+
 function loop(f, num) {
   let count = 1;
   while (count <= num) {
@@ -28,10 +24,33 @@ function loop(f, num) {
   }
 }
 
-loop(function (i) { console.log(fizzBuzz(i)); },6);
+// loop(f, 6);
 
+// 2-1번 setInterval 문제
 
-function app() {
-  const time = parseInt(prompt("몇 초 후에 실행할까요?")*1000);
-  function asyncLoop(f)
+const doIt = (f, num) => {
+  let count = 1;
+  while (count <= num) {
+    f(count);
+    count++;
+  }
 }
+
+function asyncLoop(f, num, sec) {
+  setInterval(() => {
+    loop(f, num);
+  }, sec*1000);
+}
+// asyncLoop(f, 6, 1);
+
+
+// 2-2번 setTimeout 문제
+
+function asyncLoop2(f, num, sec) {
+  setTimeout(() => {
+    loop(f, num);
+  }, sec*1000);
+}
+
+// asyncLoop2(f, 15, 5);
+
