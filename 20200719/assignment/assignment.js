@@ -28,14 +28,6 @@ function loop(f, num) {
 
 // 2-1번 setInterval 문제
 
-const doIt = (f, num) => {
-  let count = 1;
-  while (count <= num) {
-    f(count);
-    count++;
-  }
-}
-
 function asyncLoop(f, num, sec) {
   setInterval(() => {
     loop(f, num);
