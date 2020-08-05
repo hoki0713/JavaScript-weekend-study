@@ -29,6 +29,7 @@ console.log(convertToNumber('three'));
 // (찾아보라는 이유는 예를들어 전혀 모르는 차브랜드를 알아야 하는 회사에 입사했을때,
 // 차브랜드에 대해서 조금이라도 이해하고 있어야 하기때문, 그리고 검색을 습관화!!)
 
+/* 
 function carBrand(car) {
   const brandByCar = [
     { keyword : '쏘나타', brand : '현대자동차' },
@@ -43,6 +44,21 @@ function carBrand(car) {
     if(car === brandByCar[i].keyword) return brandByCar[i].brand;
     return "입력한 자동차 브랜드는 확인되지 않습니다."
   }
+}
+*/
+
+function carBrand(car) {
+  const brandByCar = {
+    '쏘나타' : '현대자동차',
+    'K5' : '기아자동차',
+    '말리브' : '쉐보레',
+    'sm3' : '삼성르노',
+    '320D' : 'BMW',
+    'A4' : 'Audi',
+  };
+  if (brandByCar[car] === undefined) return "입력한 자동차 브랜드는 확인되지 않습니다.";
+  return brandByCar[car];
+
 }
 console.log(carBrand('쏘나타'));
 console.log(carBrand('스터디'));
