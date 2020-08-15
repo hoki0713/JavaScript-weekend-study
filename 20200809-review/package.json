@@ -2,9 +2,10 @@
   "name": "20200809-review",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon src/homework/server.js"
   },
   "author": "",
   "license": "ISC"
