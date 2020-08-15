@@ -1,6 +1,5 @@
 const http = require("http");
-const log = require("./log");
-const readFile = require("./readFile");
+const { log, readLogFile } = require("./logManager");
 
 http.createServer((req, res) => {
     log(req.headers["user-agent"]);
@@ -8,7 +7,7 @@ http.createServer((req, res) => {
     switch(req.url) {
         case "/" : res.end("Hello World");
             break;
-        case "/log" : readFile(res);
+        case "/log" : readLogFile(data => res.end(data));
             break;
         default : res.end("404");
     }
