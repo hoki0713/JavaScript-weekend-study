@@ -1,0 +1,19 @@
+{
+  "name": "20200816",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "npx nodemon src/expressServer.js",
+    "prettier:all": "prettier --write ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jest": "^26.4.0",
+    "prettier": "^2.0.5"
+  }
+}

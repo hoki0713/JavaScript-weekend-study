@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<div id="screen"></div>
+<script>
+    function userComponent(users) {
+        const userLis = users.map(user => `<li>${user.name} : ${user.age}</li>`).join("");
+        return `<ul>${userLis}</ul>`
+    }
+
+    function renderHtml(component) {
+        document.querySelector("#screen").innerHTML = component;
+    }
+
+    function toJson(res) {
+        return res.json();
+    }
+
+    fetch("/api/users")
+        .then(toJson)
+        .then(userComponent)
+        .then(renderHtml)
+
+
+/*
+function order(orderSheet) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({name: "피자"})
+        }, 1000)
+    })
+}
+
+const person = {
+    eat(feed) {
+        console.log(`${food.name}를 먹는다)
+    },
+    play() {
+        console.log("놀고있다.")
+    }
+}
+
+order({ name : "페페로니 피자"}).then(food => person.eat(food))
+
+const promise = order({
+    name: "페페로니 피자"
+})
+
+promise.then(food => person.eat(food))
+person.play()
+
+*/
+</script>
+</body>
+</html>
