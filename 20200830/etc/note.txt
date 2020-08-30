@@ -1,0 +1,7 @@
+Element : 화면의 가장 작은 단위... ex) <p></p>
+Component :
+1.Element를 반환하는 함수를 컴포넌트라고 함.
+2.React.Component를 상속받고 render 메서드가 있고, Element를 리턴해야함.
+
+
+const h1 = <p>Hello</p> << 이건 Element
