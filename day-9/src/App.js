@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import data from "../data.js";
 import Counter from "./components/counter/Counter";
 import RocketFreshIcon from "./components/RocketIcon/RocketFreshIcon";
